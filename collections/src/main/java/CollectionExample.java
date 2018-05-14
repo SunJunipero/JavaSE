@@ -6,6 +6,14 @@ public class CollectionExample {
         Collection<Integer> collection  = new ArrayList<>();
         List<String> strings;
         Set<String> set;
+        /*
+        Synchronized collection
+         */
+        Vector<String> vector;
+        /*
+        Synchronized collection
+         */
+        Stack<String> stack;
         Queue<String> queue;
         Map<String, String> map = new HashMap<>();
 
