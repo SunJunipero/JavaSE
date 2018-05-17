@@ -8,7 +8,18 @@ public class PriorityQueueExample {
         priorityQueue.add("Serge");
         priorityQueue.add("Math");
         priorityQueue.add("Alex");
+        /**
+         * don't allow add nul and non-comparable object
+         */
 
+        //NPE
+        //priorityQueue.add(null);
+
+        /*
+        output:
+        [Alex, Math, Miles, Serge]
+         */
+        System.out.println(priorityQueue);
 
         priorityQueue.remove("Math");
         System.out.println(priorityQueue.size());
@@ -17,10 +28,10 @@ public class PriorityQueueExample {
         System.out.println(priorityQueue.peek());
         System.out.println(priorityQueue.size());
         System.out.println(priorityQueue.contains("Math"));
-//        System.out.println(priorityQueue.poll());
-//        System.out.println(priorityQueue.size());
-//        System.out.println(priorityQueue.poll());
-//        System.out.println(priorityQueue.size());
+        System.out.println(priorityQueue.poll());
+        System.out.println(priorityQueue.size());
+        System.out.println(priorityQueue.poll());
+        System.out.println(priorityQueue.size());
 
     }
 }

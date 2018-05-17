@@ -71,6 +71,8 @@ public class FromIterableToHashSet {
 
         /**
          * Equals and hashCode
+         *
+         * Collections with common interfaces, like Set, List, Queue, return true and same hashcode.
          */
         System.out.println(collectionHashSet);
         List<String> stringList =  Arrays.asList("val 7", "val 5", "val 3", "val 1", "val 2", null);
