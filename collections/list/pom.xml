@@ -13,11 +13,13 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modules>
+        <module>ListInterface</module>
         <module>ArrayList</module>
         <module>LinkedList</module>
         <module>Vector</module>
         <module>Stack</module>
         <module>syncList</module>
+        <module>SimpleList</module>
     </modules>
 
     

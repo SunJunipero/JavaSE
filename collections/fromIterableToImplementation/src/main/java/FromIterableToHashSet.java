@@ -18,7 +18,12 @@ public class FromIterableToHashSet {
          * -isEmpty
          * -contains
          * -containsAll
-         *
+         * -equals
+         * -hashCode
+         * -removeAll
+         * -retainAll
+         * -toArray
+         * -toArray(T[] a)
          */
 
         Collection<String> collectionHashSet = new HashSet<>();
@@ -58,7 +63,7 @@ public class FromIterableToHashSet {
         System.out.println(collectionHashSet.isEmpty());
 
         /**
-         * contains ans containAll
+         * contains and containAll
          */
         System.out.println(collectionHashSet.contains("val 7"));
         //testHashSet contains same values as in string from addAll method example
@@ -73,25 +78,66 @@ public class FromIterableToHashSet {
          * Equals and hashCode
          *
          * Collections with common interfaces, like Set, List, Queue, return true and same hashcode.
+         * @See EqualsAndHashCodeAllCollections
          */
-        System.out.println(collectionHashSet);
-        List<String> stringList =  Arrays.asList("val 7", "val 5", "val 3", "val 1", "val 2", null);
-        System.out.println(stringList);
-        System.out.println(collectionHashSet.equals(stringList));//false
 
-        LinkedHashSet<String> linkedHashSet = new LinkedHashSet<>(stringList);
-        System.out.println(linkedHashSet);
-        System.out.println(linkedHashSet.equals(stringList));//false
-        System.out.println("linkedHashSet and collectionHashSet " + linkedHashSet.equals(collectionHashSet));//true
+        /**
+         * removeAll
+         */
+        System.out.println("\tremoveAll method ");
+        System.out.println(collectionHashSet);//[null, val 7, val 3, val 5, val 1, val 2]
+        List<String> removeAllList = Arrays.asList("val 1", "val 3", "val 7");
+        boolean b = collectionHashSet.removeAll(removeAllList);
+        System.out.println(b);//true
+        System.out.println(collectionHashSet);//[null, val 5, val 2]
 
-        HashSet<String> equalsHashSet = new HashSet<>(collectionHashSet);
-        System.out.println(equalsHashSet);
-        System.out.println(collectionHashSet.equals(equalsHashSet));//true
+        /**
+         *retainAll
+         */
+        System.out.println("\tretainAll method ");
+        List<String> retainsAllList = Arrays.asList(null, null, "val 5", "val 2", "val 6");
+        boolean b1 = collectionHashSet.retainAll(retainsAllList);
+        System.out.println(b1);//true
+        System.out.println(collectionHashSet);//[null, val 5, val 2]
 
-        System.out.println("collectionHashSet - " + collectionHashSet.hashCode());
-        System.out.println("equalsHashSet - " + equalsHashSet.hashCode());
-        System.out.println("linkedHashSet - " + linkedHashSet.hashCode());
-        System.out.println("stringList - " + stringList.hashCode());
+        /**
+         * toArray
+         */
+        System.out.println("\ttoArray method ");
+        Object[] objects = collectionHashSet.toArray();
+
+        for (Object object : objects) {
+            System.out.println(object);
+        }
+
+        /**
+         * toArray(T[] a)
+         */
+        System.out.println("\ttoArray(T[] a) method ");
+        String[] strArr = new String[1];
+        System.out.println("String[] strArr - " + strArr.length);//1
+        String[] strings1 = collectionHashSet.toArray(strArr);
+        System.out.println("String[] strings1 - " + strings1.length);//3
+        /*
+        null
+        val 5
+        val 2
+         */
+        for (String s : strings1) {
+            System.out.println(s);
+        }
+        System.out.println("if array is not empty");
+        String[] strValArr = new String[]{"1","3","5"};
+        String[] strings2 = collectionHashSet.toArray(strValArr);
+        System.out.println(strings2.length);
+        for (String s : strings2) {
+            System.out.println(s);
+        }
+        /*
+            null
+            val 5
+            val 2
+         */
 
 
     }
