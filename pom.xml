@@ -13,6 +13,7 @@
     <module>collections</module>
     <module>oop</module>
     <module>CSC</module>
+    <module>java8</module>
   </modules>
 
   <name>JavaSE</name>
