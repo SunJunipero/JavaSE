@@ -14,6 +14,7 @@
     <module>oop</module>
     <module>CSC</module>
     <module>java8</module>
+    <module>generics</module>
   </modules>
 
   <name>JavaSE</name>
