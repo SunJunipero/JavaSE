@@ -4,10 +4,12 @@ public class TypeSafetyExample {
         nonGenType.typeOfValue();
         int t = (Integer) nonGenType.getT();
         System.out.println(t);
+
         NonGenType lol = new NonGenType("lol");
         lol.typeOfValue();
         String t1 = (String) lol.getT();
         System.out.println(t1);
+
         NonGenType nonGenType1 = new NonGenType(0.0001);
         nonGenType1.typeOfValue();
         double t2 = (Double) nonGenType1.getT();
