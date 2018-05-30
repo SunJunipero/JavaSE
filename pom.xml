@@ -15,6 +15,7 @@
     <module>CSC</module>
     <module>java8</module>
     <module>generics</module>
+    <module>stepic</module>
   </modules>
 
   <name>JavaSE</name>
