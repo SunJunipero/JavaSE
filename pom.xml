@@ -16,6 +16,7 @@
     <module>java8</module>
     <module>generics</module>
     <module>stepic</module>
+    <module>minimum</module>
   </modules>
 
   <name>JavaSE</name>

@@ -1,4 +1,5 @@
 import java.util.Objects;
+import java.util.Optional;
 
 public class PairExample {
     public static void main(String[] args) {
@@ -11,7 +12,6 @@ public class PairExample {
         boolean mustAlsoBeTrue = pair.hashCode() == pair2.hashCode(); // true!
         System.out.println(mustBeTrue);
         System.out.println(mustAlsoBeTrue);
-
 
     }
 }
