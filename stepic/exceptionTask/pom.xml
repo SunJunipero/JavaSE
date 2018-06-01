@@ -6,19 +6,13 @@
 
     <parent>
         <groupId>my.javase</groupId>
-        <artifactId>JavaSE</artifactId>
+        <artifactId>stepic</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
     <groupId>my.javase</groupId>
-    <artifactId>stepic</artifactId>
+    <artifactId>exceptionTask</artifactId>
     <version>1.0-SNAPSHOT</version>
-
-    <modules>
-        <module>genericsTask</module>
-        <module>collectionsTask</module>
-        <module>exceptionTask</module>
-    </modules>
 
     
 </project>
