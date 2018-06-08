@@ -6,18 +6,13 @@
 
     <parent>
         <groupId>my.javase</groupId>
-        <artifactId>JavaSE</artifactId>
+        <artifactId>minimum</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
     <groupId>my.javase</groupId>
-    <artifactId>minimum</artifactId>
+    <artifactId>job-intervie-0706</artifactId>
     <version>1.0-SNAPSHOT</version>
-
-    <modules>
-        <module>plan</module>
-        <module>job-intervie-0706</module>
-    </modules>
 
     
 </project>

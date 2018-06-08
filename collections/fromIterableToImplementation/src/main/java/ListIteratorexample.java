@@ -16,7 +16,7 @@ public class ListIteratorexample {
         }
 
         System.out.println("listIterator");
-        listIterator =  strings.listIterator(strings.size() - 2);
+        listIterator =  strings.listIterator(strings.size());
         while (listIterator.hasPrevious()) {
             System.out.println(listIterator.previous());
         }

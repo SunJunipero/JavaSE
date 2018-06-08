@@ -16,6 +16,7 @@
 
     <modules>
         <module>baseSyntax</module>
+        <module>OOP</module>
     </modules>
 
     
