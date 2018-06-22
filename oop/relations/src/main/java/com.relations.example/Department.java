@@ -34,7 +34,15 @@ public class Department implements Units{
     }
 
     @Override
-    public Integer detPersonCount() {
+    public Integer getPersonCount() {
         return employees.size();
+    }
+
+    @Override
+    public String toString() {
+        return "Department{" +
+                "name='" + name + '\'' +
+                ", employees=" + employees +
+                '}';
     }
 }

@@ -10,7 +10,7 @@ public class Employee extends Man{
     private Department department;
     private Set<PastPosition> pastPositions = new HashSet<>();
 
-    Employee(String name, String surname, String position){
+    public Employee(String name, String surname, String position){
         this.name = name;
         this.surname = surname;
         this.position = position;
@@ -66,5 +66,13 @@ public class Employee extends Man{
 
     public void setIdCard(IdCard idCard) {
         this.idCard = idCard;
+    }
+
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "name='" + name + '\'' +
+                ", surname='" + surname + '\'' +
+                '}';
     }
 }

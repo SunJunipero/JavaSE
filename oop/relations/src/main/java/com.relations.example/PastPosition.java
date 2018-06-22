@@ -24,4 +24,12 @@ public class PastPosition {
     public void setDepartment(Department department) {
         this.department = department;
     }
+
+    @Override
+    public String toString() {
+        return "PastPosition{" +
+                "name='" + name + '\'' +
+                ", department=" + department +
+                '}';
+    }
 }
