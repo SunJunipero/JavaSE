@@ -55,11 +55,19 @@ public class TestExample {
         }
         System.out.println(old_positions);
 
-
-
-
         assertEquals(new HashSet<>(Arrays.asList("QA", "jun lab")), old_positions);
 
+    }
+
+    @Test
+    public void departmentTest(){
+        Department arctic_monkyes = new Department("Arctic Monkyes");
+        arctic_monkyes.addEmployee(alex);
+        arctic_monkyes.addEmployee(math);
+        arctic_monkyes.addEmployee(cook);
+        arctic_monkyes.addEmployee(nick);
+
+        assertEquals(arctic_monkyes.getName(), nick.getDepartment().getName());
 
     }
 }
