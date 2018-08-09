@@ -17,6 +17,8 @@
     <module>generics</module>
     <module>stepic</module>
     <module>minimum</module>
+    <module>enum</module>
+    <module>annotation</module>
   </modules>
 
   <name>JavaSE</name>
