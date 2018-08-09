@@ -18,6 +18,7 @@ public class DemoRepeatAnno {
                 System.out.println("---");
             }
         } catch (NoSuchMethodException e) {
+
             e.printStackTrace();
         }
     }
