@@ -3,6 +3,11 @@ package com.streams.examples;
 import java.util.ArrayList;
 import java.util.stream.Stream;
 
+/**
+ * stream - средство конструирования операций над коллекциями с применением
+ * функционального подхода.
+ */
+
 public class StreamExample {
     public static void main(String[] args) {
         ArrayList<String> strings = new ArrayList<>();
