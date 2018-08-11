@@ -14,7 +14,6 @@ public class ExampleMaxMinStream {
                 new Person("Nick", 30, "Pzt"))
                 .max(Comparator.comparing(Person::getAge))
                 .get();
-
        // System.out.println(person);
         // stringComaring();
         integerComparing();
