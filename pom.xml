@@ -19,6 +19,7 @@
     <module>minimum</module>
     <module>enum</module>
     <module>annotation</module>
+    <module>CompareAndComparator</module>
   </modules>
 
   <name>JavaSE</name>
