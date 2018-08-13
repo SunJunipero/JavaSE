@@ -23,7 +23,8 @@ public class Example1 {
 
         String effectivelyString  = "effectivelyString";
         FunInterface<String> funInterface = System.out::println;
-        funInterface.test(effectivelyString);
+        effectivelyString = effectivelyString + "dsdsd";
+        funInterface.test(effectivelyString );
 
         String s1 = "LOLLLL !!!!";
         String s2 = "Kekkkk";

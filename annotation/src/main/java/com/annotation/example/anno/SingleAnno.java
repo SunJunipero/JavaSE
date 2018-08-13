@@ -7,7 +7,6 @@ import java.lang.annotation.RetentionPolicy;
 public @interface SingleAnno {
     /**
      * only VALUE name
-     * @return
      */
     int value();
     /**
