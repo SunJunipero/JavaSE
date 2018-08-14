@@ -13,6 +13,5 @@ public class Example {
 
         System.out.println(method(stringOp::replaceAllAtoX, "DOOM"));
 
-        System.out.println(method(StringOp::replaceAllAtoX, "OLOLOLOL"));
     }
 }
