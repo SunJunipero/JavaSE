@@ -1,6 +1,8 @@
 package com.streams.examples;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Map;
 import java.util.stream.Stream;
 
 /**
@@ -25,5 +27,6 @@ public class StreamExample {
          * stream has already been operated upon or closed
          */
         //stringStream.forEach(x  -> System.out.println(x));
+
     }
 }
