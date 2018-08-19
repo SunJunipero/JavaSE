@@ -47,6 +47,17 @@ public class Demo {
         System.out.println(bob.isPresent()); //true
 
         /**
+         * ifPresent
+         */
+
+        Person jordan = new Person("Jordan", 44);
+        Optional<Person> jordanOpt = Optional.of(jordan);
+        jordanOpt.ifPresent( jordanPerson -> jordanPerson.setAge(56));
+
+        System.out.println(jordanOpt.get());
+
+
+        /**
          * filter
          */
         Optional<Person> gats = Optional.of(new Person("Gats", 30));
