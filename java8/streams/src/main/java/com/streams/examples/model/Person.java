@@ -1,6 +1,8 @@
 package com.streams.examples.model;
 
-public class Person {
+import java.util.Comparator;
+
+public class Person implements Comparable<Person>  {
     private String name;
     private Integer age;
     private String city;
@@ -70,5 +72,10 @@ public class Person {
                 ", city=" + city +
                 ", department=" + department +
                 '}';
+    }
+
+    @Override
+    public int compareTo(Person person) {
+        return this.getName().compareTo(person.getName());
     }
 }
