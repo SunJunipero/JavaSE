@@ -8,6 +8,9 @@ import java.util.function.UnaryOperator;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+/**
+ * public interface UnaryOperator<T> extends Function<T, T>
+ */
 public class UnariOperatorExample {
 
 
@@ -26,7 +29,5 @@ public class UnariOperatorExample {
         collect.replaceAll(TestClass::changeVal);
 
         collect.forEach(System.out::println);
-
-
     }
 }
