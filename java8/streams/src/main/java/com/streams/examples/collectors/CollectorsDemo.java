@@ -135,6 +135,39 @@ public class CollectorsDemo {
         String join3 = Stream.of("ab", "jf", "po", "dsdf").collect(Collectors.joining("-", "->", "<-"));
         System.out.println(join3);
 
+        /**
+         * reducing
+         */
+        System.out.println("\t\t reducing");
+        Integer integer = IntStream.rangeClosed(1, 20)
+                .boxed()
+                /**
+                 * .reduce((integer1, integer2) -> {
+                 *                     System.out.println(integer2 - integer1);
+                 *                     return integer2 - integer1;
+                 *                 })
+                 */
+                .collect(Collectors.reducing((integer1, integer2) -> {
+                    System.out.print(integer2 - integer1 + " ");
+                    return integer2 - integer1;
+                }))
+                .get();
+
+        System.out.println("reduce res - " + integer);
+
+        System.out.println("\t\t reducing with seed");
+        Integer collect11 = IntStream.rangeClosed(1, 20)
+                .boxed()
+                .collect(Collectors.reducing(20, (i, i1) -> {
+                    System.out.println(i + i1 + " ");
+                    return i + i1;
+                }));
+
+
+        System.out.println("with seed reduce res - " + collect11);
+
+
+
 
     }
 }
