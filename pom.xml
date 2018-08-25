@@ -20,6 +20,7 @@
     <module>enum</module>
     <module>annotation</module>
     <module>CompareAndComparator</module>
+    <module>Multithreading</module>
   </modules>
 
   <name>JavaSE</name>
