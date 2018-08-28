@@ -1,4 +1,4 @@
-package repeat;
+package waitnotify.repeat;
 
 public class Demo {
     public static void main(String[] args) {

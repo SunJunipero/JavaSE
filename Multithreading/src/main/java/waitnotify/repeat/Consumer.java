@@ -1,4 +1,4 @@
-package repeat;
+package waitnotify.repeat;
 
 public class Consumer implements Runnable {
 
