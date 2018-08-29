@@ -2,7 +2,8 @@ package CreateThread;
 
 public class ImplemetRunnableDemo {
     public static void main(String[] args) {
-        new MyThread();
+            new MyThread();
+
 
         Thread thread = Thread.currentThread();
         try {
