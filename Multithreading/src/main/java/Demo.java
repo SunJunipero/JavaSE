@@ -10,6 +10,7 @@ public class Demo {
         };
 
         thread.start();
+        
         try {
             thread.join();
         } catch (InterruptedException e) {
