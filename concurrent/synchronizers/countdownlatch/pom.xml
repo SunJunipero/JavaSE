@@ -6,17 +6,13 @@
 
     <parent>
         <groupId>my.javase</groupId>
-        <artifactId>concurrent</artifactId>
+        <artifactId>synchronizers</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>synchronizers</artifactId>
+    <groupId>my.javase</groupId>
+    <artifactId>countdownlatch</artifactId>
     <version>1.0-SNAPSHOT</version>
-
-    <modules>
-        <module>semaphore</module>
-        <module>countdownlatch</module>
-    </modules>
 
     
 </project>
