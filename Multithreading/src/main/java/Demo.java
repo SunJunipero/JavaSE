@@ -1,4 +1,6 @@
-
+/**
+ * https://habr.com/post/133981/ - Модель памяти в примерах и не только
+ */
 public class Demo {
     public static void main(String[] args) {
         System.out.println("available Processors - " + Runtime.getRuntime().availableProcessors());

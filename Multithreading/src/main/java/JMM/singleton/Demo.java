@@ -1,3 +1,7 @@
+/**
+ * https://habr.com/post/129494/ - Правильный Singleton в Java
+ */
+
 package JMM.singleton;
 
 public class Demo {
