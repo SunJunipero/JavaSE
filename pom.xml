@@ -21,6 +21,7 @@
     <module>annotation</module>
     <module>CompareAndComparator</module>
     <module>Multithreading</module>
+    <module>concurrent</module>
   </modules>
 
   <name>JavaSE</name>
