@@ -13,6 +13,7 @@ public class Example {
          */
         A a1 = new B(1, "A a1 = new B()");
         a1.printString();
+        ((B) a1).specialForB();
         /**
          * B b = new A();
          */

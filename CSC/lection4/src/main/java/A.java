@@ -34,11 +34,22 @@ class Main {
 
     public static void main (String ... args) {
 
-        A a = new B();
+        A a =  new B();
 
         a.foo();
 
-        a.hey();
+       // a.hey();
+
+        /**
+         * java.lang.ClassCastException: A cannot be cast to B
+         */
+//        B b = ((B) new A());
+//
+//        b.foo();
+//
+//        b.hey();
+
+
 
     }
 

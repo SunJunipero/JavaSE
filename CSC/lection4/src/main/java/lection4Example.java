@@ -94,8 +94,8 @@ class Dog extends Animal {
 
         //List< Animal> animals = dogs;//from segmento
 
-//        ArrayList<Animal> animals = new ArrayList<>();
-//        List<Dog> dogList = animals;
+        ArrayList<Animal> animals = new ArrayList<>();
+        //List<Dog> dogList = animals;
 
     }
 
