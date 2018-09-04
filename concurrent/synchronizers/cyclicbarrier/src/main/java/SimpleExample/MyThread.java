@@ -16,6 +16,7 @@ public class MyThread extends Thread {
     public void run() {
         try {
             System.out.println(name + " : before barrier");
+            System.out.println("NumberWaiting - " + barrier.getNumberWaiting());
             barrier.await();
             System.out.println(name + " : after barrier");
 

@@ -19,6 +19,7 @@ public class Demo {
                 .peek(MyThread::start)
                 .collect(Collectors.toList());
 
+
         latch.await();
 
         Thread.sleep(200);
