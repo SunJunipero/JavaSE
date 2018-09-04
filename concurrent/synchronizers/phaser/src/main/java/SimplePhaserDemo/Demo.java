@@ -4,6 +4,7 @@ import java.util.concurrent.Phaser;
 
 public class Demo {
     public static void main(String[] args) {
+
         Phaser phaser = new Phaser(3);
 
         MyThread thread1 = new MyThread(phaser, "thread1");
