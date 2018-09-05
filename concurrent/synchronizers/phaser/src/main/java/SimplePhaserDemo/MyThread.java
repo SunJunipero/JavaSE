@@ -12,7 +12,7 @@ public class MyThread extends Thread {
         this.phaser = phaser;
         this.name = name;
         start();
-     //   phaser.register();
+        phaser.register();
     }
 
     @Override

@@ -5,7 +5,7 @@ import java.util.concurrent.Phaser;
 public class Demo {
     public static void main(String[] args) {
 
-        Phaser phaser = new Phaser(3);
+        Phaser phaser = new Phaser(1);
 
         MyThread thread1 = new MyThread(phaser, "thread1");
         MyThread thread2 = new MyThread(phaser, "thread2");

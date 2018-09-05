@@ -18,6 +18,7 @@ public class CarWasher extends Thread{
         for (int i = 0; i < 3; i++) {
             System.out.println(name + " washes car ");
             phaser.arriveAndAwaitAdvance();
+//            System.out.println(phaser.arrive());
         }
     }
 }

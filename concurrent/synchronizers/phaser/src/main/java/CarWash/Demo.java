@@ -9,8 +9,5 @@ public class Demo {
         CarWasher washer1 = new CarWasher("washer1", phaser);
         CarWasher washer2 = new CarWasher("washer2", phaser);
         CarWasher washer3 = new CarWasher("washer3", phaser);
-
-
-
     }
 }
