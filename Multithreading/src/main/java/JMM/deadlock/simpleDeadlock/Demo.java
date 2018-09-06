@@ -14,6 +14,8 @@ public class Demo {
     },"thread2");
 
     public static void main(String[] args) {
+
         thread1.start();
+        thread2.start();
     }
 }

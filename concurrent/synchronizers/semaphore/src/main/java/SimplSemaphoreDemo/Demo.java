@@ -23,7 +23,7 @@ import java.util.concurrent.Semaphore;
 
 public class Demo {
     public static void main(String[] args) {
-        Semaphore semaphore = new Semaphore(0);
+        Semaphore semaphore = new Semaphore(1);
         Adder adder = new Adder("Adder", semaphore);
         Subtractor subtractor = new Subtractor("Subtractor", semaphore);
 
