@@ -1,5 +1,4 @@
 package ExecuteExample;
-
 import java.util.stream.IntStream;
 
 public class Demo {
@@ -12,6 +11,5 @@ public class Demo {
         };
 
         new MyTask().execute(task);
-
     }
 }
