@@ -6,18 +6,12 @@
 
     <parent>
         <groupId>my.javase</groupId>
-        <artifactId>concurrent</artifactId>
+        <artifactId>executors</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>executors</artifactId>
+    <artifactId>callable-future</artifactId>
     <version>1.0-SNAPSHOT</version>
-
-    <modules>
-        <module>executor</module>
-        <module>threadpools</module>
-        <module>callable-future</module>
-    </modules>
 
     
 </project>
