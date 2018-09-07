@@ -6,21 +6,13 @@
 
     <parent>
         <groupId>my.javase</groupId>
-        <artifactId>concurrent</artifactId>
+        <artifactId>synchronizers</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>synchronizers</artifactId>
+    <groupId>my.javase</groupId>
+    <artifactId>locks</artifactId>
     <version>1.0-SNAPSHOT</version>
-
-    <modules>
-        <module>semaphore</module>
-        <module>countdownlatch</module>
-        <module>cyclicbarrier</module>
-        <module>exchanger</module>
-        <module>phaser</module>
-        <module>locks</module>
-    </modules>
 
     
 </project>
