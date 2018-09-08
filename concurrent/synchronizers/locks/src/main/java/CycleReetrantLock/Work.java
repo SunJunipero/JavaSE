@@ -34,7 +34,7 @@ public class Work {
     void put(){
         locker.lock();
         try {
-            while (count >= 1)
+            while (count >= 3)
                 condition.await();
             count++;
             System.out.println(Thread.currentThread().getName() + "  count = " + count);
