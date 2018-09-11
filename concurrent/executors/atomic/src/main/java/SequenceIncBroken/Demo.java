@@ -24,6 +24,7 @@ public class Demo {
     public static void main(String[] args) throws InterruptedException {
 
         ArrayList<Thread> threads = new ArrayList<>();
+
         for (int i = 0; i < 1_0; i++) {
            Thread t =  new Thread(()->{
                 for (int j = 0; j < 1_000; j++) {
