@@ -22,6 +22,13 @@ import java.util.concurrent.ForkJoinPool;
  *  time - 40790340
  *
  *
+ * parallelism level 1
+ * time - 24686246
+ * time - 124875220
+ * time - 68028025
+ * 4
+ * time - 50578190
+ * time - 54453291
  *
  */
 public class Demo {
@@ -36,16 +43,16 @@ public class Demo {
 //            System.out.print(initArr[i] + " ");
 //        }
 
-//        ForkJoinPool fjp = new ForkJoinPool();
-//
-//        System.out.println("parallelism level " + fjp.getParallelism());
-//
-//        MyAction myAction = new MyAction(initArr, 0, initArr.length);
+        ForkJoinPool fjp = new ForkJoinPool(4);
+
+        System.out.println("parallelism level " + fjp.getParallelism());
+
+        MyAction myAction = new MyAction(initArr, 0, initArr.length);
 
         long l = System.nanoTime();
-        //fjp.invoke(myAction);
-        new SequentialAction(initArr, 0, initArr.length).sqrtTransform();
-        //System.out.println("time - " + (System.nanoTime() - l));
+        fjp.invoke(myAction);
+        //new SequentialAction(initArr, 0, initArr.length).sqrtTransform();
+        System.out.println("time - " + (System.nanoTime() - l));
 
 //        for (int i = 0; i < 30; i++) {
 //            System.out.print(initArr[i] + " ");
