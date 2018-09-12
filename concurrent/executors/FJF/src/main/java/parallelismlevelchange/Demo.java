@@ -16,7 +16,6 @@ public class Demo {
 
         long l = System.nanoTime();
         fjp.invoke(action);
-
         System.out.println("time = " + (System.nanoTime() - l));
 
 

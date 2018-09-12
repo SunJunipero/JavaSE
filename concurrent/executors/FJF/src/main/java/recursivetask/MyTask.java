@@ -30,8 +30,8 @@ public class MyTask extends RecursiveTask<Integer> {
 
             task1.fork();
             task2.fork();
-
             sum = task1.join() + task2.join();
+
         }
         return sum;
     }
