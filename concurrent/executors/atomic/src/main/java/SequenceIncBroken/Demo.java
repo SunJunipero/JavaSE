@@ -25,7 +25,7 @@ public class Demo {
 
         ArrayList<Thread> threads = new ArrayList<>();
 
-        for (int i = 0; i < 1_0; i++) {
+        for (int i = 0; i < 1_00; i++) {
            Thread t =  new Thread(()->{
                 for (int j = 0; j < 1_000; j++) {
                     nextInt();

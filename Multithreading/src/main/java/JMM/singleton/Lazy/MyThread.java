@@ -13,7 +13,7 @@ public class MyThread extends Thread {
     @Override
     public void run() {
         hCode = LazyContainer.getContainer().hashCode();
-        System.out.println("hash code - " + LazyContainer.getContainer().hashCode()
+        System.out.println("hash code - " + hCode
                 + "\n\t\t thread's name -  " + Thread.currentThread().getName());
     }
 }
