@@ -17,18 +17,25 @@ public class MainContentionCyclicBarrier {
         //AtomicReference<Doer> doer = new AtomicReference<>();
         /**
          * Correct Doer
+         *  -SyncDoer
+         *  -AtomicDoer
+         *  -FieldUpdaterDoer
          */
-        AtomicReference<SyncDoer> doer = new AtomicReference<>();
+        //AtomicReference<SyncDoer> doer = new AtomicReference<>();
+        //AtomicReference<AtomicDoer> doer = new AtomicReference<>();
+        AtomicReference<FieldUpdaterDoer> doer = new AtomicReference<>();
         final int THREADS = Runtime.getRuntime().availableProcessors();
         final int JUMPS = 1_000;
 
         CyclicBarrier barrier = new CyclicBarrier(THREADS, ()-> {
-           // System.out.println("after : count = " + count.get());
+            //System.out.println("after : count = " + count.get());
             if (count.get() > 1){
                 System.out.println("Doer broken !!!");
                 }
-            //doer.set(new Doer());
-            doer.set(new SyncDoer());
+//            doer.set(new Doer());
+//            doer.set(new SyncDoer());
+//            doer.set(new AtomicDoer());
+              doer.set(new FieldUpdaterDoer());
             count.set(0);
         });
 
