@@ -49,6 +49,10 @@ public class Demo {
 
         System.out.println("\t\t get and accumulate");
         int accum = 10;
+        /**
+         * x = accum (seed)
+         * y = atomicInteger.get()
+         */
         System.out.println(atomicInteger.getAndAccumulate(accum, (x, y) -> x * y));
         System.out.println(atomicInteger.get());
         System.out.println("accum = " + accum);
