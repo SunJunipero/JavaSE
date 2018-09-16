@@ -5,7 +5,7 @@ public class Fibonachi {
         // 1 1 2 3 5 8 13 21
         if(i == 1) return 1;
         if(i == 2) return 1;
-        return fib(i - 1) + fib(i - 1);
+        return fib(i - 1) + fib(i - 2);
     }
 
     /**
