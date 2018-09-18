@@ -76,7 +76,29 @@ public class CreatingCompletedCF {
         /**
          * applyToEitherExample
          */
-        applyToEitherExample();
+        //applyToEitherExample();
+
+        /**
+         * acceptEitherExample
+         */
+        //acceptEitherExample();
+
+        /**
+         * runAfterBothExample
+         */
+        //runAfterBothExample();
+
+        /**
+         * runAfterBothExample
+         */
+        //runAfterBothExample();
+
+        /**
+         * thenAcceptBothExample
+         */
+        //thenAcceptBothExample();
+
+        composeVsThenApply();
 
     }
 
@@ -147,6 +169,13 @@ public class CreatingCompletedCF {
         if(n == 2) return 1;
         return fib(n - 1) + fib( n - 2);
     }
+
+    static int fac(int n ){
+        if(n == 1) return 1;
+        return n *  fac( n - 1);
+    }
+
+
     static void supplyAsync() throws ExecutionException, InterruptedException {
         CompletableFuture<Integer> cf = CompletableFuture.supplyAsync(() -> fib(10));
         System.out.println("is done - " + cf.isDone());
@@ -289,6 +318,90 @@ public class CreatingCompletedCF {
         System.out.println("cf = " + cf.join());
         System.out.println("cf2 = " + cf2.join());
     }
+
+    static void acceptEitherExample(){
+        String s = "message";
+        StringBuilder builder = new StringBuilder();
+
+        CompletableFuture<String> cf = CompletableFuture.completedFuture(s).thenApplyAsync(s1 -> {
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            System.out.println("UpperCase stage");
+            return s1.toUpperCase() + " stage 1";
+        });
+
+        CompletableFuture<Void> cf2 = cf.acceptEither(CompletableFuture.completedFuture(s).thenApplyAsync(s1 -> {
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            System.out.println("LowerCase stage");
+            System.out.println("stage 2 = " + s1);
+            return s1.toLowerCase();
+        }), s1 -> builder.append(s1).append(" accept either"));
+
+        System.out.println("cf = " + cf.join());
+        System.out.println("builder - " + builder);
+
+    }
+
+    static void runAfterBothExample(){
+        StringBuilder string = new StringBuilder("initial string");
+        CompletableFuture.completedFuture(string).thenApply(stringBuilder -> stringBuilder.append(" stage 1"))
+                .runAfterBoth(CompletableFuture.completedFuture(string).thenApply(stringBuilder -> stringBuilder.append(" stage 2")),
+                        () -> string.append(" done"));
+
+        System.out.println("res = " + string);
+
+    }
+
+    static void thenAcceptBothExample(){
+        String string = "initial string";
+        StringBuilder result = new StringBuilder();
+        CompletableFuture.completedFuture(string).thenApply(String::toUpperCase)
+                .thenAcceptBoth(CompletableFuture.completedFuture(string).thenApply(String::toLowerCase),
+                        ((string1, string2) -> {
+                            System.out.println(string1);
+                            System.out.println(string2);
+                            result.append(string1).append(string2);
+                        }));
+
+        System.out.println("result = " + result);
+    }
+
+    static void composeVsThenApply(){
+        /**
+         *    public <U> CompletableFuture<U> thenCompose(
+         *         Function<? super T, ? extends CompletionStage<U>> fn) {
+         *         return uniComposeStage(null, fn);
+         *     }
+         */
+        CompletableFuture<Long> cf = CompletableFuture.supplyAsync(() -> 42L)
+                .thenCompose(x -> CompletableFuture.supplyAsync(() -> x + 2017));
+
+        System.out.println("cf (compose) = " + cf.join());
+
+        /**
+         * public <U> CompletableFuture<U> thenApply(
+         *         Function<? super T,? extends U> fn) {
+         *         return uniApplyStage(null, fn);
+         *     }
+         */
+        CompletableFuture<CompletableFuture<Long>> cf2 = CompletableFuture.supplyAsync(() -> 42L)
+                .thenApply(x -> CompletableFuture.supplyAsync(() -> x + 2017));
+
+        System.out.println("cf2 (thenApply) = " + cf2.join().join());
+
+
+    }
+
+
+
+
 
 
 }
