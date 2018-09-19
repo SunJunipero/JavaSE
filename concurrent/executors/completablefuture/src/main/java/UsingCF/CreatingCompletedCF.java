@@ -55,12 +55,12 @@ public class CreatingCompletedCF {
         /**
          * thenAcceptExample
          */
-        //thenAcceptExample();
+        thenAcceptExample();
 
         /**
          * thenAcceptAsyncExample
          */
-        //thenAcceptAsyncExample();
+        thenAcceptAsyncExample();
 
         /**
          * completeExceptionallyExample
@@ -98,7 +98,7 @@ public class CreatingCompletedCF {
          */
         //thenAcceptBothExample();
 
-        composeVsThenApply();
+        //composeVsThenApply();
 
     }
 
