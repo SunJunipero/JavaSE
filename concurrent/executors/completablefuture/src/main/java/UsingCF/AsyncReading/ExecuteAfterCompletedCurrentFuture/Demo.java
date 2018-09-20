@@ -1,4 +1,4 @@
-package UsingCF.AsyncReading.ExecuteFfterCompletedCurrentFuture;
+package UsingCF.AsyncReading.ExecuteAfterCompletedCurrentFuture;
 
 import java.math.BigInteger;
 import java.util.concurrent.CompletableFuture;

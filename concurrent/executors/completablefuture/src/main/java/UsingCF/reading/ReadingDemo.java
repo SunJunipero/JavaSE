@@ -1,6 +1,7 @@
 package UsingCF.reading;
 
 import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.Exchanger;
 
 /**
  * boolean isDone()
@@ -10,7 +11,7 @@ import java.util.concurrent.CompletableFuture;
  * T join()
  * T get(long timeout, TimeUnit unit)
  * T getNow(T valueIfAbsent)
- * int getNumberOfDependents() //TODO
+ * int getNumberOfDependents()
  */
 public class ReadingDemo {
     public static void main(String[] args) {
@@ -23,14 +24,23 @@ public class ReadingDemo {
 
         printInfo(cf2);
 
+        //Suggest exception
+        String s = "initial";
+        CompletableFuture<String> cf3 = CompletableFuture.supplyAsync(() -> s + " (supply)");
 
+        cf3.completeExceptionally(new RuntimeException(" OOPS !!!"));
+
+        printInfo(cf3);
     }
 
     static void printInfo(CompletableFuture cf){
         System.out.println("is done - " + cf.isDone());
         System.out.println("is completed exceptionally - " + cf.isCompletedExceptionally());
         System.out.println("is cancelled - " + cf.isCancelled());
-        System.out.println("value - " + cf.join());
+
+        cf.exceptionally((th) -> ((Exception) th).getMessage()).
+                thenAccept(s -> System.out.println("value = " + s) );
+
         System.out.println("Number Of Dependents - " + cf.getNumberOfDependents());
         System.out.println("\t\t ----------------");
     }
