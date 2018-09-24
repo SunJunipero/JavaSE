@@ -23,6 +23,7 @@
     <module>Multithreading</module>
     <module>concurrent</module>
     <module>hyperskill</module>
+    <module>io</module>
   </modules>
 
   <name>JavaSE</name>

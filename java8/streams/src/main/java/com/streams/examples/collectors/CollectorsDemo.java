@@ -26,6 +26,7 @@ public class CollectorsDemo {
          */
         Map<String, Integer> collect2 = Stream.of(1, 2, 5, 6, 8).collect(Collectors.toMap(String::valueOf, Integer::valueOf));
 
+        System.out.println("Collector to map");
         collect2.forEach((s, integer) -> System.out.println(s + "  " + integer));
 
         /**
@@ -33,13 +34,14 @@ public class CollectorsDemo {
          */
 
         Map<String, Integer> collect1 = Stream.of(1, 2, 5, 6, 8, 8, 6).collect(Collectors.toMap(String::valueOf, Integer::valueOf, (oldVal, newVal) -> newVal + oldVal));
-
+        System.out.println("Collector to map with dublicate");
         collect1.forEach((s, integer) -> System.out.println(s + "  " + integer));
 
         /**
          * 4 аргумент в toMap - Supplier<M> var3 указывает, в какую коллекцию поместить )
          */
 
+        System.out.println("Collector to map with supplier");
         TreeMap<String, Integer> collect3 = Stream.of(1, 2, 5, 6, 8, 8, 6, 7, 3, 3).collect(Collectors.toMap(String::valueOf, Integer::valueOf, (oldVal, newVal) -> newVal + oldVal, TreeMap::new));
 
         collect3.forEach((s, integer) -> System.out.println(s + "  " + integer));
