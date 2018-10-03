@@ -24,6 +24,7 @@
     <module>concurrent</module>
     <module>hyperskill</module>
     <module>io</module>
+    <module>exceptions</module>
   </modules>
 
   <name>JavaSE</name>
