@@ -1,7 +1,14 @@
 package com.relations.example;
 
+import java.util.Random;
+import java.util.stream.Stream;
+
 public class Draft {
     public static void main(String[] args) {
         System.out.println("Hello, its draft folder !!!");
+
+        Stream.generate(() -> new Random().nextInt(100))
+                .limit(10)
+                .forEach(System.out::println);
     }
 }
