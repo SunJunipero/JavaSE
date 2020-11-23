@@ -13,5 +13,7 @@ public class Draft {
                 .forEach(System.out::println);
 
         System.out.println("OLOLOL");
+
+        int b = 1000;
     }
 }
