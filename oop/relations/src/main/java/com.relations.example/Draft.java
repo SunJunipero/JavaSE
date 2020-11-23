@@ -9,6 +9,7 @@ public class Draft {
 
         Stream.generate(() -> new Random().nextInt(100))
                 .limit(10)
+                .map(i -> i + 100)
                 .forEach(System.out::println);
     }
 }
