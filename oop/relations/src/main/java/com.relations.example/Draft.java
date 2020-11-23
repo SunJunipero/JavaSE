@@ -17,5 +17,7 @@ public class Draft {
 
 
 
+
+        int b = 1000;
     }
 }
