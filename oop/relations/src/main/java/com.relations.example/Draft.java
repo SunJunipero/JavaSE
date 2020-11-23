@@ -11,5 +11,7 @@ public class Draft {
                 .limit(10)
                 .map(i -> i + 100)
                 .forEach(System.out::println);
+
+        System.out.println("OLOLOL");
     }
 }
