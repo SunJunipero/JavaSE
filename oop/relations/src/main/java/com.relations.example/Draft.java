@@ -10,5 +10,7 @@ public class Draft {
         Stream.generate(() -> new Random().nextInt(100))
                 .limit(10)
                 .forEach(System.out::println);
+
+        System.out.println("OLOLOL");
     }
 }
